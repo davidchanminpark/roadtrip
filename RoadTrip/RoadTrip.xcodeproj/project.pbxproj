@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		853D967425791FA90050C156 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D967325791FA90050C156 /* TabBarVC.swift */; };
+		854AED0F2578D03500B31C14 /* ConnectSpotifyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854AED0E2578D03500B31C14 /* ConnectSpotifyVC.swift */; };
+		854AED122578DA1700B31C14 /* CreateNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854AED112578DA1700B31C14 /* CreateNameVC.swift */; };
+		854AED16257913E100B31C14 /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854AED15257913E100B31C14 /* HomePageVC.swift */; };
+		854AED1A2579144400B31C14 /* QueuePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854AED192579144400B31C14 /* QueuePageVC.swift */; };
+		854AED1D2579146200B31C14 /* AddSongPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854AED1C2579146200B31C14 /* AddSongPageVC.swift */; };
+		854AED202579147700B31C14 /* HistoryPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854AED1F2579147700B31C14 /* HistoryPageVC.swift */; };
+		854AED232579148A00B31C14 /* SettingsPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854AED222579148A00B31C14 /* SettingsPageVC.swift */; };
 		857740C82570C1190055D155 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857740C72570C1190055D155 /* AppDelegate.swift */; };
 		857740CA2570C1190055D155 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857740C92570C1190055D155 /* SceneDelegate.swift */; };
 		857740CC2570C1190055D155 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857740CB2570C1190055D155 /* LogInViewController.swift */; };
@@ -17,12 +25,21 @@
 		857740E12571FC7D0055D155 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857740E02571FC7D0055D155 /* Auth.swift */; };
 		857740EF25762D100055D155 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857740EE25762D100055D155 /* CreateAccountVC.swift */; };
 		857740F3257643530055D155 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 857740F2257643530055D155 /* GoogleService-Info.plist */; };
+		85A5FA752577D851002B2381 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A5FA742577D851002B2381 /* User.swift */; };
 		A1499FEB3C716C012A954894 /* Pods_RoadTrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28895DD52A6C0915B3B5E61A /* Pods_RoadTrip.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		22F578C364253CA14E5BC237 /* Pods-RoadTrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadTrip.release.xcconfig"; path = "Target Support Files/Pods-RoadTrip/Pods-RoadTrip.release.xcconfig"; sourceTree = "<group>"; };
 		28895DD52A6C0915B3B5E61A /* Pods_RoadTrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoadTrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		853D967325791FA90050C156 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		854AED0E2578D03500B31C14 /* ConnectSpotifyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectSpotifyVC.swift; sourceTree = "<group>"; };
+		854AED112578DA1700B31C14 /* CreateNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNameVC.swift; sourceTree = "<group>"; };
+		854AED15257913E100B31C14 /* HomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
+		854AED192579144400B31C14 /* QueuePageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueuePageVC.swift; sourceTree = "<group>"; };
+		854AED1C2579146200B31C14 /* AddSongPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSongPageVC.swift; sourceTree = "<group>"; };
+		854AED1F2579147700B31C14 /* HistoryPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryPageVC.swift; sourceTree = "<group>"; };
+		854AED222579148A00B31C14 /* SettingsPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPageVC.swift; sourceTree = "<group>"; };
 		857740C42570C1190055D155 /* RoadTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		857740C72570C1190055D155 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		857740C92570C1190055D155 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +53,7 @@
 		857740E02571FC7D0055D155 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		857740EE25762D100055D155 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		857740F2257643530055D155 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		85A5FA742577D851002B2381 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E5727A897ED43AF06570E945 /* Pods-RoadTrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadTrip.debug.xcconfig"; path = "Target Support Files/Pods-RoadTrip/Pods-RoadTrip.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,7 +105,16 @@
 				857740C92570C1190055D155 /* SceneDelegate.swift */,
 				857740CB2570C1190055D155 /* LogInViewController.swift */,
 				857740CD2570C1190055D155 /* Main.storyboard */,
+				854AED15257913E100B31C14 /* HomePageVC.swift */,
+				854AED192579144400B31C14 /* QueuePageVC.swift */,
+				854AED1C2579146200B31C14 /* AddSongPageVC.swift */,
+				854AED1F2579147700B31C14 /* HistoryPageVC.swift */,
+				854AED222579148A00B31C14 /* SettingsPageVC.swift */,
+				854AED112578DA1700B31C14 /* CreateNameVC.swift */,
+				853D967325791FA90050C156 /* TabBarVC.swift */,
+				854AED0E2578D03500B31C14 /* ConnectSpotifyVC.swift */,
 				857740EE25762D100055D155 /* CreateAccountVC.swift */,
+				85A5FA742577D851002B2381 /* User.swift */,
 				857740D02570C11B0055D155 /* Assets.xcassets */,
 				857740D22570C11B0055D155 /* LaunchScreen.storyboard */,
 				857740D52570C11B0055D155 /* Info.plist */,
@@ -221,11 +248,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				853D967425791FA90050C156 /* TabBarVC.swift in Sources */,
 				857740CC2570C1190055D155 /* LogInViewController.swift in Sources */,
 				857740C82570C1190055D155 /* AppDelegate.swift in Sources */,
 				857740CA2570C1190055D155 /* SceneDelegate.swift in Sources */,
+				854AED16257913E100B31C14 /* HomePageVC.swift in Sources */,
+				854AED122578DA1700B31C14 /* CreateNameVC.swift in Sources */,
+				854AED1D2579146200B31C14 /* AddSongPageVC.swift in Sources */,
+				854AED232579148A00B31C14 /* SettingsPageVC.swift in Sources */,
+				854AED202579147700B31C14 /* HistoryPageVC.swift in Sources */,
 				857740EF25762D100055D155 /* CreateAccountVC.swift in Sources */,
 				857740E12571FC7D0055D155 /* Auth.swift in Sources */,
+				854AED1A2579144400B31C14 /* QueuePageVC.swift in Sources */,
+				85A5FA752577D851002B2381 /* User.swift in Sources */,
+				854AED0F2578D03500B31C14 /* ConnectSpotifyVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
