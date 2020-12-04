@@ -3,20 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8517081E257A289B003FE254 /* SpotifyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517081D257A289B003FE254 /* SpotifyHandler.swift */; };
+		85170821257A3B15003FE254 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85170820257A3B15003FE254 /* Launch Screen.storyboard */; };
+		85170825257A5218003FE254 /* QueueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85170824257A5218003FE254 /* QueueVC.swift */; };
+		85170828257A5260003FE254 /* History1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85170827257A5260003FE254 /* History1VC.swift */; };
+		8517082B257A5272003FE254 /* History2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517082A257A5272003FE254 /* History2VC.swift */; };
+		8517082E257A5291003FE254 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517082D257A5291003FE254 /* SearchVC.swift */; };
+		85170831257A52B4003FE254 /* SearchResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85170830257A52B4003FE254 /* SearchResultsVC.swift */; };
+		85170835257A5943003FE254 /* SpotifyAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 85170834257A5943003FE254 /* SpotifyAPI */; };
+		85170838257A5D16003FE254 /* SpotifyAPIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85170837257A5D16003FE254 /* SpotifyAPIHandler.swift */; };
+		8517083C257A6F66003FE254 /* SongTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517083B257A6F66003FE254 /* SongTrack.swift */; };
 		853D967425791FA90050C156 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853D967325791FA90050C156 /* TabBarVC.swift */; };
 		854AED0F2578D03500B31C14 /* ConnectSpotifyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854AED0E2578D03500B31C14 /* ConnectSpotifyVC.swift */; };
 		854AED122578DA1700B31C14 /* CreateNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854AED112578DA1700B31C14 /* CreateNameVC.swift */; };
 		854AED16257913E100B31C14 /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854AED15257913E100B31C14 /* HomePageVC.swift */; };
-		854AED1A2579144400B31C14 /* QueuePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854AED192579144400B31C14 /* QueuePageVC.swift */; };
 		854AED1D2579146200B31C14 /* AddSongPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854AED1C2579146200B31C14 /* AddSongPageVC.swift */; };
 		854AED202579147700B31C14 /* HistoryPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854AED1F2579147700B31C14 /* HistoryPageVC.swift */; };
 		854AED232579148A00B31C14 /* SettingsPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854AED222579148A00B31C14 /* SettingsPageVC.swift */; };
 		857740C82570C1190055D155 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857740C72570C1190055D155 /* AppDelegate.swift */; };
-		857740CA2570C1190055D155 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857740C92570C1190055D155 /* SceneDelegate.swift */; };
 		857740CC2570C1190055D155 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857740CB2570C1190055D155 /* LogInViewController.swift */; };
 		857740CF2570C1190055D155 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 857740CD2570C1190055D155 /* Main.storyboard */; };
 		857740D12570C11B0055D155 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 857740D02570C11B0055D155 /* Assets.xcassets */; };
@@ -32,17 +40,24 @@
 /* Begin PBXFileReference section */
 		22F578C364253CA14E5BC237 /* Pods-RoadTrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadTrip.release.xcconfig"; path = "Target Support Files/Pods-RoadTrip/Pods-RoadTrip.release.xcconfig"; sourceTree = "<group>"; };
 		28895DD52A6C0915B3B5E61A /* Pods_RoadTrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoadTrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8517081D257A289B003FE254 /* SpotifyHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyHandler.swift; sourceTree = "<group>"; };
+		85170820257A3B15003FE254 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		85170824257A5218003FE254 /* QueueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueVC.swift; sourceTree = "<group>"; };
+		85170827257A5260003FE254 /* History1VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History1VC.swift; sourceTree = "<group>"; };
+		8517082A257A5272003FE254 /* History2VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History2VC.swift; sourceTree = "<group>"; };
+		8517082D257A5291003FE254 /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		85170830257A52B4003FE254 /* SearchResultsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsVC.swift; sourceTree = "<group>"; };
+		85170837257A5D16003FE254 /* SpotifyAPIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAPIHandler.swift; sourceTree = "<group>"; };
+		8517083B257A6F66003FE254 /* SongTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTrack.swift; sourceTree = "<group>"; };
 		853D967325791FA90050C156 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		854AED0E2578D03500B31C14 /* ConnectSpotifyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectSpotifyVC.swift; sourceTree = "<group>"; };
 		854AED112578DA1700B31C14 /* CreateNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNameVC.swift; sourceTree = "<group>"; };
 		854AED15257913E100B31C14 /* HomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
-		854AED192579144400B31C14 /* QueuePageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueuePageVC.swift; sourceTree = "<group>"; };
 		854AED1C2579146200B31C14 /* AddSongPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSongPageVC.swift; sourceTree = "<group>"; };
 		854AED1F2579147700B31C14 /* HistoryPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryPageVC.swift; sourceTree = "<group>"; };
 		854AED222579148A00B31C14 /* SettingsPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPageVC.swift; sourceTree = "<group>"; };
 		857740C42570C1190055D155 /* RoadTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		857740C72570C1190055D155 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		857740C92570C1190055D155 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		857740CB2570C1190055D155 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		857740CE2570C1190055D155 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		857740D02570C11B0055D155 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,6 +78,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				857740DD2570D9E00055D155 /* SpotifyiOS.framework in Frameworks */,
+				85170835257A5943003FE254 /* SpotifyAPI in Frameworks */,
 				A1499FEB3C716C012A954894 /* Pods_RoadTrip.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,12 +117,19 @@
 			isa = PBXGroup;
 			children = (
 				857740E02571FC7D0055D155 /* Auth.swift */,
+				8517083B257A6F66003FE254 /* SongTrack.swift */,
 				857740C72570C1190055D155 /* AppDelegate.swift */,
-				857740C92570C1190055D155 /* SceneDelegate.swift */,
 				857740CB2570C1190055D155 /* LogInViewController.swift */,
+				8517081D257A289B003FE254 /* SpotifyHandler.swift */,
+				85170837257A5D16003FE254 /* SpotifyAPIHandler.swift */,
 				857740CD2570C1190055D155 /* Main.storyboard */,
+				85170824257A5218003FE254 /* QueueVC.swift */,
+				85170827257A5260003FE254 /* History1VC.swift */,
+				8517082A257A5272003FE254 /* History2VC.swift */,
+				8517082D257A5291003FE254 /* SearchVC.swift */,
+				85170830257A52B4003FE254 /* SearchResultsVC.swift */,
+				85170820257A3B15003FE254 /* Launch Screen.storyboard */,
 				854AED15257913E100B31C14 /* HomePageVC.swift */,
-				854AED192579144400B31C14 /* QueuePageVC.swift */,
 				854AED1C2579146200B31C14 /* AddSongPageVC.swift */,
 				854AED1F2579147700B31C14 /* HistoryPageVC.swift */,
 				854AED222579148A00B31C14 /* SettingsPageVC.swift */,
@@ -151,6 +174,9 @@
 			dependencies = (
 			);
 			name = RoadTrip;
+			packageProductDependencies = (
+				85170834257A5943003FE254 /* SpotifyAPI */,
+			);
 			productName = RoadTrip;
 			productReference = 857740C42570C1190055D155 /* RoadTrip.app */;
 			productType = "com.apple.product-type.application";
@@ -178,6 +204,9 @@
 				Base,
 			);
 			mainGroup = 857740BB2570C1190055D155;
+			packageReferences = (
+				85170833257A5943003FE254 /* XCRemoteSwiftPackageReference "SpotifyAPI" */,
+			);
 			productRefGroup = 857740C52570C1190055D155 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -195,6 +224,7 @@
 				857740D42570C11B0055D155 /* LaunchScreen.storyboard in Resources */,
 				857740D12570C11B0055D155 /* Assets.xcassets in Resources */,
 				857740CF2570C1190055D155 /* Main.storyboard in Resources */,
+				85170821257A3B15003FE254 /* Launch Screen.storyboard in Resources */,
 				857740F3257643530055D155 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,18 +280,24 @@
 			files = (
 				853D967425791FA90050C156 /* TabBarVC.swift in Sources */,
 				857740CC2570C1190055D155 /* LogInViewController.swift in Sources */,
+				85170831257A52B4003FE254 /* SearchResultsVC.swift in Sources */,
+				8517082B257A5272003FE254 /* History2VC.swift in Sources */,
 				857740C82570C1190055D155 /* AppDelegate.swift in Sources */,
-				857740CA2570C1190055D155 /* SceneDelegate.swift in Sources */,
 				854AED16257913E100B31C14 /* HomePageVC.swift in Sources */,
 				854AED122578DA1700B31C14 /* CreateNameVC.swift in Sources */,
 				854AED1D2579146200B31C14 /* AddSongPageVC.swift in Sources */,
 				854AED232579148A00B31C14 /* SettingsPageVC.swift in Sources */,
+				85170828257A5260003FE254 /* History1VC.swift in Sources */,
 				854AED202579147700B31C14 /* HistoryPageVC.swift in Sources */,
 				857740EF25762D100055D155 /* CreateAccountVC.swift in Sources */,
+				8517081E257A289B003FE254 /* SpotifyHandler.swift in Sources */,
+				8517082E257A5291003FE254 /* SearchVC.swift in Sources */,
+				85170825257A5218003FE254 /* QueueVC.swift in Sources */,
+				85170838257A5D16003FE254 /* SpotifyAPIHandler.swift in Sources */,
 				857740E12571FC7D0055D155 /* Auth.swift in Sources */,
-				854AED1A2579144400B31C14 /* QueuePageVC.swift in Sources */,
 				85A5FA752577D851002B2381 /* User.swift in Sources */,
 				854AED0F2578D03500B31C14 /* ConnectSpotifyVC.swift in Sources */,
+				8517083C257A6F66003FE254 /* SongTrack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,14 +443,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E5727A897ED43AF06570E945 /* Pods-RoadTrip.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4SQ6CVUFYA;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RoadTrip",
 				);
 				INFOPLIST_FILE = RoadTrip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -432,14 +469,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 22F578C364253CA14E5BC237 /* Pods-RoadTrip.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4SQ6CVUFYA;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RoadTrip",
 				);
 				INFOPLIST_FILE = RoadTrip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,6 +513,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		85170833257A5943003FE254 /* XCRemoteSwiftPackageReference "SpotifyAPI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Peter-Schorn/SpotifyAPI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		85170834257A5943003FE254 /* SpotifyAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85170833257A5943003FE254 /* XCRemoteSwiftPackageReference "SpotifyAPI" */;
+			productName = SpotifyAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 857740BC2570C1190055D155 /* Project object */;
 }

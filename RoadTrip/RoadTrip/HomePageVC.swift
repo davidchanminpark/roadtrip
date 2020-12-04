@@ -10,5 +10,7 @@ import Foundation
 class HomePageVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        hello.text = "Hi \(user.name)"
     }
+    @IBOutlet weak var hello: UILabel!
 }

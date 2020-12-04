@@ -55,7 +55,7 @@ class CreateAccountVC: UIViewController {
                     self.accountsRef.addDocument(
                         data: ["username" : self.usernameInput.text!,
                                "password": self.passwordInput.text!,
-                               "isConnected": true])
+                               "isConnected": false])
                     self.showSuccessMessage()
                 } else {
                     self.showErrorMessage(errorMsg: "Username is taken. Try a different one")

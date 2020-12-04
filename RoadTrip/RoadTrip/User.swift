@@ -9,5 +9,6 @@ import Foundation
 
 struct User {
     let name: String
-    let isRegMember: Bool // if false - then user is the person with music account linked to app account
+    let isMusicPlayer: Bool // if false - then user is just a regular member
+    let accountRefID: String
 }
