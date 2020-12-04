@@ -8,83 +8,55 @@
 import UIKit
 import Firebase
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    var window: UIWindow?
     
-//    func sessionManager(manager: SPTSessionManager, didInitiate session: SPTSession) {
-//        self.appRemote.connectionParameters.accessToken = session.accessToken
-//        self.appRemote.connect()
-//    }
-//
-//    func sessionManager(manager: SPTSessionManager, didFailWith error: Error) {
-//        <#code#>
-//    }
-//
+    override init() {
+        FirebaseApp.configure()
+    }
     
-    //var auth = SPTAuth()
-//    var accessToken = ""
+    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    lazy var loginVC = storyBoard.instantiateViewController(withIdentifier: "loginVC") as! LogInViewController
     
-    //var window: UIWindow?
     
-//    lazy var configuration = SPTConfiguration(clientID: Auth.clientID, redirectURL: Auth.redirectURI)
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        print("openurl")
+        sharedSpotifyHandler.sessionManager.application(app, open: url, options: options)
+        return true
+    }
     
-//    lazy var sessionManager: SPTSessionManager = {
-//            if let tokenSwapURL = URL(string: "https://[your token swap app domain here]/api/token"),
-//               let tokenRefreshURL = URL(string: "https://[your token swap app domain here]/api/refresh_token") {
-//                self.configuration.tokenSwapURL = tokenSwapURL
-//                self.configuration.tokenRefreshURL = tokenRefreshURL
-//                self.configuration.playURI = ""
-//            }
-//            let manager = SPTSessionManager(configuration: self.configuration, delegate: self)
-//            return manager
-//        }()
-    
-//    lazy var appRemote: SPTAppRemote = {
-//      let appRemote = SPTAppRemote(configuration: self.configuration, logLevel: .debug)
-//      appRemote.connectionParameters.accessToken = self.accessToken
-//      appRemote.delegate = self
-//      return appRemote
-//    }()
-//
-//
-//    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-//      let parameters = appRemote.authorizationParameters(from: url);
-//
-//            if let access_token = parameters?[SPTAppRemoteAccessTokenKey] {
-//                appRemote.connectionParameters.accessToken = access_token
-//                self.accessToken = access_token
-//            } else if let error_description = parameters?[SPTAppRemoteErrorDescriptionKey] {
-//                // Show the error
-//                print(error_description)
-//            }
-//      return true
-//    }
-    
-//    func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
-//        print("connected")
-//    }
-//
-//    func appRemote(_ appRemote: SPTAppRemote, didFailConnectionAttemptWithError error: Error?) {
-//        print("disconnected")
-//
-//    }
-//
-//    func appRemote(_ appRemote: SPTAppRemote, didDisconnectWithError error: Error?) {
-//        print("failed")
-//
-//    }
-//
-//    func playerStateDidChange(_ playerState: SPTAppRemotePlayerState) {
-//        print("player state changed")
-//
-//    }
-    
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        FirebaseApp.configure()
+        
+ //       window = UIWindow(frame: UIScreen.main.bounds)
+//        window?.rootViewController = loginVC
+//        window?.makeKeyAndVisible()
+        
+        
         return true
+    }
+    
+    func applicationWillResignActive(_ application: UIApplication) {
+        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+        // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    }
+
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
+        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    }
+
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    }
+
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    }
+
+    func applicationWillTerminate(_ application: UIApplication) {
+        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
 //    func setup() {
@@ -107,17 +79,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: UISceneSession Lifecycle
 
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-    }
+//    @available(iOS 13.0, *)
+//    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+//        // Called when a new scene session is being created.
+//        // Use this method to select a configuration to create the new scene with.
+//        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+//    }
 
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
+//    @available(iOS 13.0, *)
+//    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
+//        // Called when the user discards a scene session.
+//        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
+//        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+//    }
 
 
 }

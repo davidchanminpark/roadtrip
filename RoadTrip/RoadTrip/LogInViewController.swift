@@ -8,15 +8,19 @@
 import UIKit
 import Firebase
 
-class LogInViewController: UIViewController  {
+//protocol ConnectToSpotifyDelegate: class {
+//    func connect()
+//}
+
+class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        print("hi")
     }
     
     let db = Firestore.firestore()
-    
     lazy var accountsRef = db.collection("accounts")
     
     @IBOutlet weak var usernameInput: UITextField!
@@ -70,13 +74,34 @@ class LogInViewController: UIViewController  {
         self.present(alert, animated: true)
     }
     
-    func connectToSpotify(action: UIAlertAction) {
-        self.dismiss(animated: true, completion: nil)
-        self.performSegue(withIdentifier: "connectToSpotify", sender: self)
-    }
     
-    func backToLogin(action: UIAlertAction) {
-        self.dismiss(animated: true, completion: nil)
+    
+    func connectToSpotify(action: UIAlertAction) {
+        let scope: SPTScope = [.appRemoteControl]
+        
+        if #available(iOS 11, *) {
+            // Use this on iOS 11 and above to take advantage of SFAuthenticationSession
+            sharedSpotifyHandler.sessionManager.initiateSession(with: scope, options: .clientOnly)
+        } else {
+            // Use this on iOS versions < 11 to use SFSafariViewController
+            sharedSpotifyHandler.sessionManager.initiateSession(with: scope, options: .clientOnly, presenting: self)
+        }
+        
+        let currAccount = accountsRef.whereField("username", isEqualTo: usernameInput.text!)
+        
+        currAccount.getDocuments() { (query, err) in
+            if let err = err {
+                print("Error checking for username: \(err)")
+            } else {
+                let id = query!.documents[0].documentID
+                self.accountsRef.document(id).updateData([
+                    "isConnected": true
+                ])
+            }
+        }
+        
+        self.performSegue(withIdentifier: "connectAsMusicPlayer", sender: self)
+        
     }
     
     func showErrorMessage(errorMsg: String) {
@@ -88,28 +113,35 @@ class LogInViewController: UIViewController  {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "connectToSpotify" {
-            let vc = segue.destination as! ConnectSpotifyVC
-            vc.username = usernameInput.text!
-        }
-        if segue.identifier == "connectAsMember"{
+        let currAccount = accountsRef.whereField("username", isEqualTo: usernameInput.text!)
+        
+        if segue.identifier == "connectAsMusicPlayer" {
             let vc = segue.destination as! CreateNameVC
-            vc.modalPresentationStyle = .fullScreen
-            vc.username = usernameInput.text!
+            //vc.accessToken = sessionManager.session!.accessToken
+            //print(accessToken)
+            currAccount.getDocuments() { (query, err) in
+                if let err = err {
+                    print("Error checking for username: \(err)")
+                } else {
+                    vc.carAccountID = query!.documents[0].documentID
+                }
+            }
+            vc.isMusicPlayer = true
         }
+        if segue.identifier == "connectAsMember" {
+            let vc = segue.destination as! CreateNameVC
+            currAccount.getDocuments() { (query, err) in
+                if let err = err {
+                    print("Error checking for username: \(err)")
+                } else {
+                    vc.carAccountID = query!.documents[0].documentID
+                }
+            }
+            
+            vc.isMusicPlayer = false
+        }
+
     }
-    
-    //    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-//      let parameters = appRemote.authorizationParameters(from: url);
-//
-//            if let access_token = parameters?[SPTAppRemoteAccessTokenKey] {
-//                appRemote.connectionParameters.accessToken = access_token
-//                self.accessToken = access_token
-//            } else if let error_description = parameters?[SPTAppRemoteErrorDescriptionKey] {
-//                // Show the error
-//            }
-//      return true
-//    }
     
     
 }
